@@ -1,0 +1,181 @@
+/* ============================================================
+   BASE.CSS — Variables, reset, tipografía, scrollbar
+   ============================================================ */
+
+/* ---- Google Fonts Import ---- */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,900&family=Syncopate:wght@400;700&family=Barlow:wght@300;400;600;700&display=swap');
+
+/* ---- CSS Custom Properties ---- */
+:root {
+    /* Colores principales */
+    --bg-primary:   #05050B;
+    --bg-secondary: #0A0A14;
+    --bg-card:      #0E0E1C;
+    --bg-card-2:    #13131F;
+
+    /* Neón */
+    --cyan:         #00F0FF;
+    --blue:         #0072FF;
+    --pink:         #FF00A0;
+    --purple:       #4A00E0;
+
+    /* Gradientes */
+    --grad-cyan-blue:  linear-gradient(135deg, #00F0FF, #0072FF);
+    --grad-pink-purple: linear-gradient(135deg, #FF00A0, #4A00E0);
+    --grad-full:       linear-gradient(135deg, #00F0FF 0%, #0072FF 40%, #4A00E0 70%, #FF00A0 100%);
+
+    /* Texto */
+    --text-primary:   #FFFFFF;
+    --text-secondary: #E2E8F0;
+    --text-muted:     #7A7A9A;
+
+    /* Bordes */
+    --border-subtle: rgba(255,255,255,0.06);
+    --border-cyan:   rgba(0,240,255,0.25);
+    --border-pink:   rgba(255,0,160,0.25);
+
+    /* Tipografías */
+    --font-title:   'Orbitron', sans-serif;
+    --font-hero:    'Montserrat', sans-serif;
+    --font-ui:      'Syncopate', sans-serif;
+    --font-body:    'Barlow', sans-serif;
+
+    /* Sombras neón */
+    --glow-cyan:  0 0 20px rgba(0,240,255,0.4);
+    --glow-pink:  0 0 20px rgba(255,0,160,0.4);
+    --glow-blue:  0 0 20px rgba(0,114,255,0.4);
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--cyan), var(--pink));
+    border-radius: 3px;
+}
+
+/* ---- Tipografías utilitarias ---- */
+.font-title {
+    font-family: var(--font-title);
+}
+.font-hero {
+    font-family: var(--font-hero);
+    font-style: italic;
+    font-weight: 900;
+}
+.font-ui {
+    font-family: var(--font-ui);
+}
+.font-body {
+    font-family: var(--font-body);
+}
+
+/* ---- Helpers de color ---- */
+.text-cyan  { color: var(--cyan); }
+.text-blue  { color: var(--blue); }
+.text-pink  { color: var(--pink); }
+.text-muted { color: var(--text-muted); }
+
+/* ---- Gradient text ---- */
+.grad-text {
+    background: var(--grad-full);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ---- Sección genérica ---- */
+.section-label {
+    font-family: var(--font-ui);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    display: block;
+}
+
+.section-title {
+    font-family: var(--font-title);
+    font-size: clamp(2rem, 5vw, 3.8rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.section-title span.accent-cyan  { color: var(--cyan); }
+.section-title span.accent-pink  { color: var(--pink); }
+.section-title span.grad-text    {
+    background: var(--grad-full);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ---- Divider line ---- */
+.accent-line {
+    width: 64px;
+    height: 3px;
+    background: var(--grad-full);
+    border-radius: 2px;
+    margin: 0 auto;
+}
+.accent-line.left { margin: 0; }
+
+/* ---- Container ---- */
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+/* ---- Background decorations ---- */
+.glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+}
+.glow-orb.cyan  { background: rgba(0,240,255,0.12); }
+.glow-orb.pink  { background: rgba(255,0,160,0.12); }
+.glow-orb.blue  { background: rgba(0,114,255,0.10); }

@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FITZONE — Clases grupales de G.A.P. y Entrenamiento Funcional diseñadas por profesionales. San Bernardo, Chile.">
+    <meta name="keywords" content="fitzone, gym, fitness, san bernardo, g.a.p., funcional, clases grupales, entrenamiento, deporte">
+    <title>FITZONE | Transforma Tu Vida</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/css/lightgallery-bundle.min.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <div class="whatsapp-wrap">
+        <span class="float-tag wa">¡Escríbenos!</span>
+        <a href="https://wa.me/56922554457?text=Hola,%20vengo%20desde%20la%20página%20web" target="_blank" class="whatsapp-float" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <!-- FLOATING CAL.COM BUTTON -->
+    <div class="book-wrap">
+        <span class="float-tag book">¡Reserva ahora!</span>
+        <button 
+            data-cal-link="fitson/30min" 
+            data-cal-namespace="30min" 
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}' 
+            class="btn-float-book" 
+            aria-label="Reservar clase">
+            <div class="pulse-ring"></div>
+            <i class="far fa-calendar-check"></i>
+            <span>Reservar Clase</span>
+        </button>
+    </div>
+
+    <!-- NAV -->
+    <nav id="main-nav">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="#home" class="nav-logo">
+                    <img src="images/logo.jpeg" alt="FITZONE Logo" class="nav-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <span class="nav-logo-fallback"><i class="fas fa-bolt"></i></span>
+                    <div>
+                        <p class="nav-brand-main">FITZONE</p>
+                        <p class="nav-brand-sub">Transforma Tu Vida</p>
+                    </div>
+                </a>
+                <nav class="nav-links">
+                    <a href="#home" class="nav-link">Inicio</a>
+                    <a href="#clases" class="nav-link">Clases</a>
+                    <a href="#instalaciones" class="nav-link">Instalaciones</a>
+                    <a href="#horario" class="nav-link">Horario</a>
+                    <a href="#planes" class="nav-link">Planes</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                    <a href="https://wa.me/56922554457?text=Hola,%20quiero%20mi%20primera%20clase%20gratis" target="_blank" class="btn btn-primary"><i class="fas fa-bolt"></i>1ª Clase Gratis</a>
+                </nav>
+                <button id="mobile-btn" class="nav-mobile-btn" aria-expanded="false" aria-controls="mobile-menu"><i id="mobile-icon" class="fas fa-bars"></i></button>
+            </div>
+            <div id="mobile-menu">
+                <a href="#home" class="mobile-link">Inicio</a>
+                <a href="#clases" class="mobile-link">Clases</a>
+                <a href="#instalaciones" class="mobile-link">Instalaciones</a>
+                <a href="#horario" class="mobile-link">Horario</a>
+                <a href="#planes" class="mobile-link">Planes</a>
+                <a href="#contacto" class="mobile-link">Contacto</a>
+                <a href="https://wa.me/56922554457?text=Hola,%20quiero%20mi%20primera%20clase%20gratis" target="_blank" class="btn btn-primary btn-full" style="margin-top:1rem;"><i class="fas fa-bolt"></i>1ª Clase Gratis</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&h=1080&fit=crop&q=80" alt="FITZONE Hero">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="glow-orb cyan" style="width:500px;height:500px;top:-100px;left:-150px;" aria-hidden="true"></div>
+        <div class="glow-orb pink" style="width:400px;height:400px;bottom:0;right:-100px;" aria-hidden="true"></div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-grid-layout">
+                    <!-- Left -->
+                    <div style="text-align:center;" class="fade-in">
+                        <div class="entry-slide-down" style="margin-bottom:1.5rem;">
+                            <span class="brand-badge"><i class="fas fa-certificate"></i> Clases Diseñadas por Profesionales</span>
+                        </div>
+                        <div class="accent-line left" style="margin:0 auto 1.5rem;"></div>
+                        <div style="display:flex;align-items:center;gap:1.5rem;justify-content:center;margin-bottom:1.75rem;flex-wrap:wrap;">
+                            <img src="images/logo.jpeg" alt="FITZONE Logo" class="neon-pulse-cyan" style="width:120px;height:120px;object-fit:cover;border-radius:50%;border:2px solid rgba(0,240,255,0.4);">
+                            <h1 class="hero-title grad-text-animated" style="text-align:left;">FIT<br>ZONE</h1>
+                        </div>
+                        <p style="font-size:1.1rem;color:var(--text-muted);max-width:480px;margin:0 auto 2rem;font-weight:300;line-height:1.7;">
+                            Clases grupales diseñadas por profesionales para transformar tu cuerpo. <strong style="color:var(--cyan);">G.A.P.</strong> · Entrenamiento Funcional.
+                        </p>
+                        <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:2.5rem;">
+                            <a href="https://wa.me/56922554457?text=Hola,%20quiero%20mi%20primera%20clase%20gratis" target="_blank" class="btn btn-primary"><i class="fas fa-gift"></i>1ª Clase Gratis</a>
+                            <a href="#planes" class="btn btn-ghost"><i class="fas fa-list"></i>Ver Planes</a>
+                        </div>
+                        <div style="display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;">
+                            <div style="text-align:center;">
+                                <div class="stat-number" data-target="2">2</div>
+                                <div style="font-family:var(--font-ui);font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);margin-top:4px;">Disciplinas</div>
+                            </div>
+                            <div style="width:1px;background:rgba(255,255,255,0.08);"></div>
+                            <div style="text-align:center;">
+                                <div class="stat-number" style="color:var(--pink);">8AM</div>
+                                <div style="font-family:var(--font-ui);font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);margin-top:4px;">Primera Clase</div>
+                            </div>
+                            <div style="width:1px;background:rgba(255,255,255,0.08);"></div>
+                            <div style="text-align:center;">
+                                <div class="stat-number" data-target="6">6</div>
+                                <div style="font-family:var(--font-ui);font-size:0.55rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);margin-top:4px;">Días / Semana</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right: video mockup -->
+                    <div style="position:relative;" class="fade-in">
+                        <div class="hero-video-wrap" style="position:relative;border-radius:20px;overflow:hidden;box-shadow:0 0 50px rgba(0,240,255,0.15);border:1px solid rgba(0,240,255,0.2);background:#000;min-height:350px;">
+                            <iframe src="https://player.vimeo.com/video/95380310?h=9f8101bf3a&autoplay=1&muted=1&loop=1&background=1" 
+                                frameborder="0" 
+                                allow="autoplay; fullscreen; picture-in-picture" 
+                                allowfullscreen
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;pointer-events:none;">
+                            </iframe>
+                            <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(0,0,0,0.4), transparent);"></div>
+                        </div>
+                        <div class="hero-video-glow" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator" aria-hidden="true"><i class="fas fa-chevron-down"></i></div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-strip" aria-hidden="true">
+        <div class="marquee-inner">
+            <span class="marquee-item"><i class="fas fa-bolt"></i> G.A.P.</span>
+            <span class="marquee-item"><i class="fas fa-dumbbell"></i> Entrenamiento Funcional</span>
+            <span class="marquee-item"><i class="fas fa-running"></i> Clases Grupales</span>
+            <span class="marquee-item"><i class="fas fa-fire"></i> Profesores Certificados</span>
+            <span class="marquee-item"><i class="fas fa-star"></i> 1ª Clase Gratis</span>
+            <span class="marquee-item"><i class="fas fa-trophy"></i> Matrícula Gratis</span>
+            <span class="marquee-item"><i class="fas fa-bolt"></i> G.A.P.</span>
+            <span class="marquee-item"><i class="fas fa-dumbbell"></i> Entrenamiento Funcional</span>
+            <span class="marquee-item"><i class="fas fa-running"></i> Clases Grupales</span>
+            <span class="marquee-item"><i class="fas fa-fire"></i> Profesores Certificados</span>
+            <span class="marquee-item"><i class="fas fa-star"></i> 1ª Clase Gratis</span>
+            <span class="marquee-item"><i class="fas fa-trophy"></i> Matrícula Gratis</span>
+        </div>
+    </div>
+
+    <!-- WHY US -->
+    <section class="section-block bg-alt">
+        <div class="glow-orb cyan" style="width:400px;height:400px;top:-80px;right:-100px;" aria-hidden="true"></div>
+        <div class="container">
+            <div class="section-head fade-in">
+                <span class="section-label">¿Por qué elegirnos?</span>
+                <h2 class="section-title" style="margin-top:0.5rem;">ENTRENA EN UN <span class="accent-cyan">NIVEL DIFERENTE</span></h2>
+                <p style="color:var(--text-muted);margin-top:1rem;max-width:520px;margin-left:auto;margin-right:auto;">En FITZONE cada clase es una experiencia diseñada por profesionales para transformar tu cuerpo y tu mente.</p>
+                <div class="accent-line"></div>
+            </div>
+            <div class="why-grid stagger">
+                <div class="service-card fade-in">
+                    <div class="service-icon cyan"><i class="fas fa-certificate"></i></div>
+                    <h3 style="font-family:var(--font-title);font-size:1.15rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Profesionales Certificados</h3>
+                    <p style="color:var(--text-muted);font-size:0.88rem;line-height:1.65;">Cada clase diseñada y guiada por entrenadores profesionales del deporte.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon pink"><i class="fas fa-users"></i></div>
+                    <h3 style="font-family:var(--font-title);font-size:1.15rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Clases Grupales</h3>
+                    <p style="color:var(--text-muted);font-size:0.88rem;line-height:1.65;">Entrena en comunidad, mantén la motivación y supera tus límites junto a otros.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon cyan"><i class="fas fa-user-shield"></i></div>
+                    <h3 style="font-family:var(--font-title);font-size:1.15rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Para Todos los Niveles</h3>
+                    <p style="color:var(--text-muted);font-size:0.88rem;line-height:1.65;">Rutinas adaptables desde principiantes hasta avanzados. Sin importar tu nivel, hay un lugar para ti.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon blue"><i class="fas fa-clock"></i></div>
+                    <h3 style="font-family:var(--font-title);font-size:1.15rem;letter-spacing:0.05em;margin-bottom:0.5rem;">Horario Amplio</h3>
+                    <p style="color:var(--text-muted);font-size:0.88rem;line-height:1.65;">De lunes a sábado con múltiples franjas horarias para que entrenes cuando puedas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLASES -->
+    <section id="clases" class="section-block">
+        <div class="container">
+            <div class="section-head fade-in">
+                <span class="section-label">Disciplinas</span>
+                <h2 class="section-title" style="margin-top:0.5rem;">ARMA <span class="grad-text">TU CUERPO</span></h2>
+                <div class="accent-line"></div>
+            </div>
+            <div class="discipline-grid">
+                <div class="discipline-card fade-in">
+                    <img class="dc-bg" src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=800&h=1000&fit=crop&q=80" alt="G.A.P." loading="lazy">
+                    <div class="dc-overlay neon-tint-cyan"></div>
+                    <div class="dc-content">
+                        <span class="discipline-tag cyan"><i class="fas fa-bolt"></i> Especialidad</span>
+                        <h3 style="font-family:var(--font-title);font-size:2rem;margin:0.5rem 0;">G.A.P.</h3>
+                        <p style="color:rgba(255,255,255,0.7);font-size:0.88rem;line-height:1.6;">Entrenamientos grupales que trabajan glúteos, abdomen y piernas. Adaptable a principiantes y avanzados.</p>
+                        <div style="margin-top:0.75rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+                            <span style="font-size:0.72rem;padding:0.25rem 0.6rem;border-radius:20px;background:rgba(0,240,255,0.1);color:var(--cyan);border:1px solid rgba(0,240,255,0.2);">Tonificación</span>
+                            <span style="font-size:0.72rem;padding:0.25rem 0.6rem;border-radius:20px;background:rgba(0,240,255,0.1);color:var(--cyan);border:1px solid rgba(0,240,255,0.2);">Core</span>
+                            <span style="font-size:0.72rem;padding:0.25rem 0.6rem;border-radius:20px;background:rgba(0,240,255,0.1);color:var(--cyan);border:1px solid rgba(0,240,255,0.2);">Quema de calorías</span>
+                        </div>
+                        <a href="#planes" style="display:inline-flex;align-items:center;gap:0.5rem;color:var(--cyan);font-size:0.85rem;font-weight:600;margin-top:0.75rem;">Ver planes <i class="fas fa-arrow-right" style="font-size:0.7rem;"></i></a>
+                    </div>
+                </div>
+                <div class="discipline-card fade-in" style="transition-delay:0.08s;">
+                    <img class="dc-bg" src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?w=800&h=1000&fit=crop&q=80" alt="Entrenamiento Funcional" loading="lazy">
+                    <div class="dc-overlay neon-tint-pink"></div>
+                    <div class="dc-content">
+                        <span class="discipline-tag pink"><i class="fas fa-fire"></i> Alta Intensidad</span>
+                        <h3 style="font-family:var(--font-title);font-size:2rem;margin:0.5rem 0;">Entrenamiento Funcional</h3>
+                        <p style="color:rgba(255,255,255,0.7);font-size:0.88rem;line-height:1.6;">Ejercicios que imitan movimientos cotidianos como empujar, tirar, girar, agacharse y cargar.</p>
+                        <div style="margin-top:0.75rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
+                            <span style="font-size:0.72rem;padding:0.25rem 0.6rem;border-radius:20px;background:rgba(255,0,160,0.1);color:var(--pink);border:1px solid rgba(255,0,160,0.2);">Fuerza</span>
+                            <span style="font-size:0.72rem;padding:0.25rem 0.6rem;border-radius:20px;background:rgba(255,0,160,0.1);color:var(--pink);border:1px solid rgba(255,0,160,0.2);">Movilidad</span>
+                            <span style="font-size:0.72rem;padding:0.25rem 0.6rem;border-radius:20px;background:rgba(255,0,160,0.1);color:var(--pink);border:1px solid rgba(255,0,160,0.2);">Estabilidad</span>
+                        </div>
+                        <a href="#planes" style="display:inline-flex;align-items:center;gap:0.5rem;color:var(--pink);font-size:0.85rem;font-weight:600;margin-top:0.75rem;">Ver planes <i class="fas fa-arrow-right" style="font-size:0.7rem;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSTALACIONES -->
+    <section id="instalaciones" class="section-block bg-alt">
+        <div class="glow-orb pink" style="width:350px;height:350px;bottom:-50px;left:-80px;" aria-hidden="true"></div>
+        <div class="container">
+            <div class="section-head fade-in">
+                <span class="section-label">El espacio</span>
+                <h2 class="section-title" style="margin-top:0.5rem;">NUESTRAS <span class="accent-cyan">INSTALACIONES</span></h2>
+                <p style="color:var(--text-muted);margin-top:1rem;max-width:520px;margin-left:auto;margin-right:auto;">Un espacio diseñado para que entrenes cómodo, seguro y con todo lo que necesitas.</p>
+                <div class="accent-line"></div>
+            </div>
+            <!-- Galería -->
+            <div id="gallery" class="gallery-grid fade-in">
+                <a href="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=1920&h=1080&fit=crop&q=80" class="gallery-item relative" data-lg-size="1920-1080">
+                    <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=800&h=600&fit=crop&q=80" alt="Sala de entrenamiento FITZONE" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus" style="color:#fff;font-size:1.5rem;"></i></div>
+                </a>
+                <a href="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1920&h=1080&fit=crop&q=80" class="gallery-item relative" data-lg-size="1920-1080">
+                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=600&fit=crop&q=80" alt="Clases grupales FITZONE" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus" style="color:#fff;font-size:1.5rem;"></i></div>
+                </a>
+                <a href="https://images.unsplash.com/photo-1576678927484-cc907957088c?w=1920&h=1080&fit=crop&q=80" class="gallery-item relative" data-lg-size="1920-1080">
+                    <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?w=800&h=600&fit=crop&q=80" alt="Equipamiento FITZONE" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus" style="color:#fff;font-size:1.5rem;"></i></div>
+                </a>
+                <a href="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1920&h=1080&fit=crop&q=80" class="gallery-item relative" data-lg-size="1920-1080">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=600&fit=crop&q=80" alt="Zona de pesas FITZONE" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus" style="color:#fff;font-size:1.5rem;"></i></div>
+                </a>
+                <a href="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=1920&h=1080&fit=crop&q=80" class="gallery-item relative" data-lg-size="1920-1080">
+                    <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=800&h=600&fit=crop&q=80" alt="Entrenamiento de fuerza" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus" style="color:#fff;font-size:1.5rem;"></i></div>
+                </a>
+                <a href="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=1920&h=1080&fit=crop&q=80" class="gallery-item relative" data-lg-size="1920-1080">
+                    <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=800&h=600&fit=crop&q=80" alt="Comunidad FITZONE" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus" style="color:#fff;font-size:1.5rem;"></i></div>
+                </a>
+            </div>
+            <!-- Videos lado a lado -->
+            <div style="max-width:1100px;margin:5rem auto 0;display:flex;flex-direction:column;gap:7rem;">
+                <!-- Sala -->
+                <div class="facility-pair fade-in">
+                    <div>
+                        <h3 style="font-family:var(--font-title);font-size:2.2rem;margin-bottom:1.25rem;line-height:1.1;">EQUIPAMIENTO DE <span style="color:var(--cyan);">PRIMER NIVEL</span></h3>
+                        <p style="color:var(--text-secondary);line-height:1.75;margin-bottom:2rem;font-weight:300;">Sala equipada con todo lo necesario para tus clases de G.A.P. y Funcional. Espacio amplio y ventilado para entrenar con comodidad.</p>
+                        <ul style="display:flex;flex-direction:column;gap:0.75rem;max-width:400px;">
+                            <li style="display:flex;align-items:center;gap:1rem;background:rgba(0,240,255,0.04);border:1px solid rgba(0,240,255,0.1);padding:0.75rem;border-radius:8px;">
+                                <span style="width:36px;height:36px;border-radius:50%;background:rgba(0,240,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--cyan);"><i class="fas fa-check"></i></span>
+                                <span style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-secondary);">Equipamiento profesional</span>
+                            </li>
+                            <li style="display:flex;align-items:center;gap:1rem;background:rgba(0,240,255,0.04);border:1px solid rgba(0,240,255,0.1);padding:0.75rem;border-radius:8px;">
+                                <span style="width:36px;height:36px;border-radius:50%;background:rgba(0,240,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--cyan);"><i class="fas fa-arrows-alt"></i></span>
+                                <span style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-secondary);">Espacio amplio y ventilado</span>
+                            </li>
+                            <li style="display:flex;align-items:center;gap:1rem;background:rgba(0,240,255,0.04);border:1px solid rgba(0,240,255,0.1);padding:0.75rem;border-radius:8px;">
+                                <span style="width:36px;height:36px;border-radius:50%;background:rgba(0,240,255,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--cyan);"><i class="fas fa-dumbbell"></i></span>
+                                <span style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-secondary);">Implementos de alta calidad</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div style="position:relative;width:100%;max-width:360px;margin:0 auto;border-radius:20px;overflow:hidden;aspect-ratio:9/16;border:1px solid rgba(0,240,255,0.2);box-shadow:0 0 50px rgba(0,240,255,0.1);background:#000;">
+                            <iframe src="https://player.vimeo.com/video/387876355?h=4d7ba76364&autoplay=1&muted=1&loop=1&background=1" 
+                                frameborder="0" 
+                                allow="autoplay; fullscreen; picture-in-picture" 
+                                allowfullscreen
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;pointer-events:none;">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+                <!-- Baños -->
+                <div class="facility-pair fade-in">
+                    <div>
+                        <div style="position:relative;width:100%;max-width:360px;margin:0 auto;border-radius:20px;overflow:hidden;aspect-ratio:9/16;border:1px solid rgba(255,0,160,0.2);box-shadow:0 0 50px rgba(255,0,160,0.08);background:#000;">
+                            <iframe src="https://player.vimeo.com/video/80629626?h=bb7e6e0ea8&autoplay=1&muted=1&loop=1&background=1" 
+                                frameborder="0" 
+                                allow="autoplay; fullscreen; picture-in-picture" 
+                                allowfullscreen
+                                style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;pointer-events:none;">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 style="font-family:var(--font-title);font-size:2.2rem;margin-bottom:1.25rem;line-height:1.1;">COMODIDAD <span style="color:var(--pink);">GARANTIZADA</span></h3>
+                        <p style="color:var(--text-secondary);line-height:1.75;margin-bottom:2rem;font-weight:300;">Camarines limpios y cómodos para que tu experiencia sea completa de principio a fin.</p>
+                        <div style="display:flex;flex-direction:column;gap:1rem;max-width:420px;">
+                            <div style="background:var(--bg-card);border:1px solid rgba(0,240,255,0.08);border-radius:12px;padding:1.25rem;display:flex;align-items:center;gap:1rem;">
+                                <div style="width:50px;height:50px;background:rgba(0,240,255,0.08);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.4rem;color:var(--cyan);"><i class="fas fa-shower"></i></div>
+                                <div>
+                                    <p style="font-family:var(--font-ui);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;">Duchas disponibles</p>
+                                    <p style="color:var(--text-muted);font-size:0.82rem;margin-top:3px;">Para que te refresques después de entrenar.</p>
+                                </div>
+                            </div>
+                            <div style="background:var(--bg-card);border:1px solid rgba(255,0,160,0.08);border-radius:12px;padding:1.25rem;display:flex;align-items:center;gap:1rem;">
+                                <div style="width:50px;height:50px;background:rgba(255,0,160,0.08);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.4rem;color:var(--pink);"><i class="fas fa-lock"></i></div>
+                                <div>
+                                    <p style="font-family:var(--font-ui);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;">Lockers seguros</p>
+                                    <p style="color:var(--text-muted);font-size:0.82rem;margin-top:3px;">Guarda tus pertenencias con tranquilidad.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HORARIO -->
+    <section id="horario" class="section-block">
+        <div class="container">
+            <div class="section-head fade-in">
+                <span class="section-label">Planifica tu semana</span>
+                <h2 class="section-title" style="margin-top:0.5rem;"><span class="accent-cyan">HORARIO</span> DE CLASES</h2>
+                <p style="color:var(--text-muted);font-size:0.85rem;margin-top:0.75rem;">** Clases sujetas a modificaciones — Consulta en <a href="https://instagram.com/fitzonesport.cl" target="_blank" style="color:var(--cyan);font-weight:700;">@fitzonesport.cl</a></p>
+                <div class="accent-line"></div>
+            </div>
+            <div class="fade-in" style="max-width:800px;margin:0 auto;">
+                <div style="background:var(--bg-card);border:1px solid rgba(0,240,255,0.12);border-radius:16px;overflow:hidden;">
+                    <table style="width:100%;border-collapse:collapse;text-align:center;">
+                        <thead>
+                            <tr style="background:rgba(0,240,255,0.06);">
+                                <th style="padding:1.25rem 1.5rem;font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--cyan);text-align:left;border-bottom:1px solid rgba(0,240,255,0.1);">Días</th>
+                                <th style="padding:1.25rem 1.5rem;font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--cyan);border-bottom:1px solid rgba(0,240,255,0.1);">Horario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+                                <td style="padding:1.1rem 1.5rem;text-align:left;">
+                                    <span style="font-family:var(--font-title);font-size:0.85rem;letter-spacing:0.04em;">Lunes, Miércoles y Viernes</span>
+                                </td>
+                                <td style="padding:1.1rem 1.5rem;">
+                                    <span style="color:var(--cyan);font-weight:700;font-size:1rem;">8:00 AM</span>
+                                    <span style="color:var(--text-muted);margin:0 0.4rem;">—</span>
+                                    <span style="color:var(--pink);font-weight:700;font-size:1rem;">20:10 PM</span>
+                                </td>
+                            </tr>
+                            <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+                                <td style="padding:1.1rem 1.5rem;text-align:left;">
+                                    <span style="font-family:var(--font-title);font-size:0.85rem;letter-spacing:0.04em;">Martes y Jueves</span>
+                                </td>
+                                <td style="padding:1.1rem 1.5rem;">
+                                    <span style="color:var(--cyan);font-weight:700;font-size:1rem;">9:00 AM</span>
+                                    <span style="color:var(--text-muted);margin:0 0.4rem;">—</span>
+                                    <span style="color:var(--pink);font-weight:700;font-size:1rem;">20:10 PM</span>
+                                </td>
+                            </tr>
+                            <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+                                <td style="padding:1.1rem 1.5rem;text-align:left;">
+                                    <span style="font-family:var(--font-title);font-size:0.85rem;letter-spacing:0.04em;">Sábado</span>
+                                </td>
+                                <td style="padding:1.1rem 1.5rem;">
+                                    <span style="color:var(--cyan);font-weight:700;font-size:1rem;">9:00 AM</span>
+                                    <span style="color:var(--text-muted);margin:0 0.4rem;">—</span>
+                                    <span style="color:var(--pink);font-weight:700;font-size:1rem;">10:00 AM</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:1.1rem 1.5rem;text-align:left;">
+                                    <span style="font-family:var(--font-title);font-size:0.85rem;letter-spacing:0.04em;">Domingo</span>
+                                </td>
+                                <td style="padding:1.1rem 1.5rem;">
+                                    <span style="color:var(--text-muted);font-weight:700;font-size:1rem;">CERRADO</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="text-align:center;margin-top:1.5rem;">
+                    <p style="color:var(--text-muted);font-size:0.82rem;"><i class="fas fa-clock" style="color:var(--cyan);margin-right:0.4rem;"></i>Duración de cada clase: <strong style="color:#fff;">1 hora</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROMOCIONES -->
+    <section id="promociones" class="section-block bg-alt">
+        <div class="glow-orb cyan" style="width:500px;height:500px;top:0;right:-120px;" aria-hidden="true"></div>
+        <div class="glow-orb pink" style="width:400px;height:400px;bottom:0;left:-100px;" aria-hidden="true"></div>
+        <div class="container" style="position:relative;z-index:1;">
+            <div class="section-head fade-in">
+                <span class="section-label">Ofertas exclusivas</span>
+                <h2 class="section-title" style="margin-top:0.5rem;">NUESTRAS <span class="grad-text">PROMOCIONES</span></h2>
+                <p style="color:var(--text-muted);margin-top:1rem;max-width:500px;margin-left:auto;margin-right:auto;">Aprovecha nuestras promociones vigentes y comienza a transformar tu vida hoy.</p>
+                <div class="accent-line"></div>
+            </div>
+            <div class="promo-grid">
+                <div class="promo-card fade-in">
+                    <div style="overflow:hidden;position:relative;">
+                        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&h=400&fit=crop&q=80" alt="Clase de Prueba Gratis" style="width:100%;height:auto;transition:transform 0.5s;" loading="lazy">
+                        <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--bg-card-2),transparent);"></div>
+                    </div>
+                    <div style="padding:1.5rem;text-align:center;flex:1;display:flex;flex-direction:column;justify-content:flex-end;">
+                        <h4 style="font-family:var(--font-title);font-size:1.2rem;margin-bottom:1rem;">Clase de Prueba Gratis</h4>
+                        <a href="https://wa.me/56922554457?text=Hola,%20quiero%20mi%20clase%20de%20prueba%20gratis" target="_blank" class="btn btn-primary btn-full"><i class="fab fa-whatsapp"></i> Consultar</a>
+                    </div>
+                </div>
+                <div class="promo-card featured fade-in" style="transition-delay:0.1s;position:relative;">
+                    <div style="position:absolute;top:1rem;right:1rem;z-index:2;"><span class="plan-badge badge-cyan">Destacado</span></div>
+                    <div style="overflow:hidden;position:relative;">
+                        <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&h=400&fit=crop&q=80" alt="Matrícula Gratis" style="width:100%;height:auto;transition:transform 0.5s;" loading="lazy">
+                        <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--bg-card-2),transparent);"></div>
+                    </div>
+                    <div style="padding:1.5rem;text-align:center;flex:1;display:flex;flex-direction:column;justify-content:flex-end;">
+                        <h4 style="font-family:var(--font-title);font-size:1.2rem;color:var(--cyan);margin-bottom:1rem;">Matrícula Gratis</h4>
+                        <a href="https://wa.me/56922554457?text=Hola,%20quiero%20consultar%20la%20matrícula%20gratis" target="_blank" class="btn btn-outline-cyan btn-full"><i class="fab fa-whatsapp"></i> Consultar</a>
+                    </div>
+                </div>
+                <div class="promo-card fade-in" style="transition-delay:0.2s;">
+                    <div style="overflow:hidden;position:relative;">
+                        <img src="https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=600&h=400&fit=crop&q=80" alt="Trae a un Amigo" style="width:100%;height:auto;transition:transform 0.5s;" loading="lazy">
+                        <div style="position:absolute;inset:0;background:linear-gradient(to top,var(--bg-card-2),transparent);"></div>
+                    </div>
+                    <div style="padding:1.5rem;text-align:center;flex:1;display:flex;flex-direction:column;justify-content:flex-end;">
+                        <h4 style="font-family:var(--font-title);font-size:1.2rem;margin-bottom:1rem;">Trae a un Amigo</h4>
+                        <a href="https://wa.me/56922554457?text=Hola,%20quiero%20consultar%20la%20promo%20trae%20a%20un%20amigo" target="_blank" class="btn btn-primary btn-full"><i class="fab fa-whatsapp"></i> Consultar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANES -->
+    <section id="planes" class="section-block">
+        <div class="glow-orb cyan" style="width:400px;height:400px;top:50%;left:-100px;transform:translateY(-50%);" aria-hidden="true"></div>
+        <div class="container" style="position:relative;z-index:1;">
+            <div class="section-head fade-in">
+                <span class="section-label">Inversión en ti</span>
+                <h2 class="section-title" style="margin-top:0.5rem;">PLANES Y <span class="grad-text">PRECIOS</span></h2>
+                <p style="color:var(--text-muted);margin-top:1rem;max-width:520px;margin-left:auto;margin-right:auto;">Elige el plan que mejor se adapta a tu ritmo. Clases de G.A.P. y Funcional incluidas en todos los planes.</p>
+                <div class="accent-line"></div>
+            </div>
+            <p style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;text-align:center;color:var(--text-muted);margin-bottom:1.5rem;" class="fade-in">— PLANES GRUPALES —</p>
+            <div class="plans-grid" style="max-width:1100px;margin:0 auto 2.5rem;">
+                <!-- 8 clases -->
+                <div class="plan-card cyan fade-in">
+                    <div style="text-align:center;margin-bottom:1.5rem;">
+                        <div style="width:48px;height:48px;background:rgba(0,240,255,0.08);border:1px solid rgba(0,240,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 0.75rem;color:var(--cyan);font-size:1.2rem;"><i class="fas fa-calendar-week"></i></div>
+                        <h4 style="font-family:var(--font-title);font-size:1.15rem;letter-spacing:0.05em;">8 Clases</h4>
+                        <p style="color:var(--text-muted);font-size:0.78rem;margin-top:0.25rem;">2 clases por semana</p>
+                        <div class="price-amount">$25.000 <span class="price-unit">/mes</span></div>
+                    </div>
+                    <div style="margin-bottom:1.5rem;">
+                        <div class="check-item"><i class="fas fa-check"></i> 8 clases mensuales</div>
+                        <div class="check-item"><i class="fas fa-check"></i> Clases grupales</div>
+                        <div class="check-item"><i class="fas fa-check"></i> G.A.P. y Funcional</div>
+                        <div class="check-item"><i class="fas fa-check"></i> Matrícula gratis*</div>
+                    </div>
+                    <a href="https://wa.me/56922554457?text=Hola,%20quiero%20el%20plan%20de%208%20clases" target="_blank" class="btn btn-primary btn-full">Contratar Plan</a>
+                </div>
+                <!-- 12 clases -->
+                <div class="plan-card cyan featured fade-in" style="transition-delay:0.08s;">
+                    <span class="plan-badge badge-cyan">POPULAR</span>
+                    <div style="text-align:center;margin-bottom:1.5rem;">
+                        <div style="width:48px;height:48px;background:rgba(0,240,255,0.08);border:1px solid rgba(0,240,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 0.75rem;color:var(--cyan);font-size:1.2rem;"><i class="fas fa-calendar-alt"></i></div>
+                        <h4 style="font-family:var(--font-title);font-size:1.15rem;letter-spacing:0.05em;">12 Clases</h4>
+                        <p style="color:var(--text-muted);font-size:0.78rem;margin-top:0.25rem;">3 clases por semana</p>
+                        <div class="price-amount">$30.000 <span class="price-unit">/mes</span></div>
+                    </div>
+                    <div style="margin-bottom:1.5rem;">
+                        <div class="check-item"><i class="fas fa-check"></i> 12 clases mensuales</div>
+                        <div class="check-item"><i class="fas fa-check"></i> Clases grupales</div>
+                        <div class="check-item"><i class="fas fa-check"></i> G.A.P. y Funcional</div>
+                        <div class="check-item"><i class="fas fa-check"></i> Matrícula gratis*</div>
+                    </div>
+                    <a href="https://wa.me/56922554457?text=Hola,%20quiero%20el%20plan%20de%2012%20clases" target="_blank" class="btn btn-primary btn-full">Contratar Plan</a>
+                </div>
+                <!-- 16 clases -->
+                <div class="plan-card pink fade-in" style="transition-delay:0.16s;">
+                    <div style="text-align:center;margin-bottom:1.5rem;">
+                        <div style="width:48px;height:48px;background:rgba(255,0,160,0.08);border:1px solid rgba(255,0,160,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 0.75rem;color:var(--pink);font-size:1.2rem;"><i class="fas fa-calendar-check"></i></div>
+                        <h4 style="font-family:var(--font-title);font-size:1.15rem;letter-spacing:0.05em;">16 Clases</h4>
+                        <p style="color:var(--text-muted);font-size:0.78rem;margin-top:0.25rem;">4 clases por semana</p>
+                        <div class="price-amount pink">$35.000 <span class="price-unit">/mes</span></div>
+                    </div>
+                    <div style="margin-bottom:1.5rem;">
+                        <div class="check-item pink"><i class="fas fa-check"></i> 16 clases mensuales</div>
+                        <div class="check-item pink"><i class="fas fa-check"></i> Clases grupales</div>
+                        <div class="check-item pink"><i class="fas fa-check"></i> G.A.P. y Funcional</div>
+                        <div class="check-item pink"><i class="fas fa-check"></i> Matrícula gratis*</div>
+                    </div>
+                    <a href="https://wa.me/56922554457?text=Hola,%20quiero%20el%20plan%20de%2016%20clases" target="_blank" class="btn btn-neon btn-full">Contratar Plan</a>
+                </div>
+                <!-- Full clases -->
+                <div class="plan-card pink fade-in" style="transition-delay:0.24s;">
+                    <span class="plan-badge badge-pink">MEJOR VALOR</span>
+                    <div style="text-align:center;margin-bottom:1.5rem;">
+                        <div style="width:48px;height:48px;background:rgba(255,0,160,0.08);border:1px solid rgba(255,0,160,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 0.75rem;color:var(--pink);font-size:1.2rem;"><i class="fas fa-infinity"></i></div>
+                        <h4 style="font-family:var(--font-title);font-size:1.15rem;letter-spacing:0.05em;">Full Clases</h4>
+                        <p style="color:var(--text-muted);font-size:0.78rem;margin-top:0.25rem;">Clases ilimitadas</p>
+                        <div class="price-amount pink">$40.000 <span class="price-unit">/mes</span></div>
+                    </div>
+                    <div style="margin-bottom:1.5rem;">
+                        <div class="check-item pink"><i class="fas fa-check"></i> Clases ilimitadas</div>
+                        <div class="check-item pink"><i class="fas fa-check"></i> Sin restricciones de horario</div>
+                        <div class="check-item pink"><i class="fas fa-check"></i> G.A.P. y Funcional</div>
+                        <div class="check-item pink"><i class="fas fa-check"></i> Matrícula gratis*</div>
+                    </div>
+                    <a href="https://wa.me/56922554457?text=Hola,%20quiero%20el%20plan%20Full%20clases" target="_blank" class="btn btn-neon btn-full">Contratar Plan</a>
+                </div>
+            </div>
+            <!-- Banner matrícula -->
+            <div class="fade-in" style="max-width:560px;margin:0 auto 4rem;">
+                <div style="border:1px solid rgba(0,240,255,0.2);background:rgba(0,240,255,0.04);border-radius:10px;padding:1rem 1.5rem;text-align:center;display:flex;align-items:center;justify-content:center;gap:0.75rem;">
+                    <i class="fas fa-trophy" style="color:var(--cyan);font-size:1.3rem;"></i>
+                    <p style="font-size:0.88rem;color:var(--text-secondary);"><strong style="color:var(--cyan);">¡MATRÍCULA GRATIS!</strong> · Medios de pago: Visa, Mastercard, Redcompra, Transbank Webpay</p>
+                </div>
+            </div>
+            <!-- Medios de pago -->
+            <div style="text-align:center;margin-bottom:2rem;" class="fade-in">
+                <div style="display:inline-flex;align-items:center;gap:1.5rem;flex-wrap:wrap;justify-content:center;">
+                    <div style="display:flex;align-items:center;gap:0.5rem;color:var(--text-muted);font-size:0.82rem;"><i class="fab fa-cc-visa" style="font-size:1.4rem;color:var(--cyan);"></i> Visa</div>
+                    <div style="display:flex;align-items:center;gap:0.5rem;color:var(--text-muted);font-size:0.82rem;"><i class="fab fa-cc-mastercard" style="font-size:1.4rem;color:var(--pink);"></i> Mastercard</div>
+                    <div style="display:flex;align-items:center;gap:0.5rem;color:var(--text-muted);font-size:0.82rem;"><i class="fas fa-credit-card" style="font-size:1.2rem;color:var(--cyan);"></i> Redcompra</div>
+                    <div style="display:flex;align-items:center;gap:0.5rem;color:var(--text-muted);font-size:0.82rem;"><i class="fas fa-mobile-alt" style="font-size:1.2rem;color:var(--pink);"></i> Transbank Webpay</div>
+                </div>
+            </div>
+            <!-- 1ª clase badge -->
+            <div style="text-align:center;margin-top:2.5rem;" class="fade-in">
+                <div style="display:inline-flex;align-items:center;gap:1rem;background:var(--bg-card);border:1px solid rgba(0,240,255,0.15);border-radius:12px;padding:1.25rem 2rem;">
+                    <i class="fas fa-gift" style="color:var(--cyan);font-size:1.8rem;"></i>
+                    <div style="text-align:left;">
+                        <p style="font-family:var(--font-ui);font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;color:#fff;">1ª CLASE GRATIS</p>
+                        <p style="color:var(--text-muted);font-size:0.78rem;margin-top:2px;">Prueba sin compromiso · Escríbenos por WhatsApp</p>
+                    </div>
+                </div>
+            </div>
+            <!-- CTA grande -->
+            <div style="margin-top:3.5rem;" class="fade-in">
+                <div style="border-radius:16px;background:linear-gradient(135deg,rgba(0,240,255,0.07),rgba(255,0,160,0.05));border:1px solid rgba(0,240,255,0.15);">
+                    <div style="padding:3rem;text-align:center;">
+                        <h3 style="font-family:var(--font-title);font-size:2.2rem;letter-spacing:0.04em;margin-bottom:0.75rem;">¿CUPOS LIMITADOS?</h3>
+                        <p style="color:var(--text-muted);margin-bottom:2rem;max-width:420px;margin-left:auto;margin-right:auto;">No esperes más. Contáctanos por Instagram o WhatsApp.</p>
+                        <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
+                            <a href="https://wa.me/56922554457?text=Hola,%20quiero%20información%20sobre%20los%20planes" target="_blank" class="btn btn-primary"><i class="fab fa-whatsapp"></i>WhatsApp</a>
+                            <a href="https://instagram.com/fitzonesport.cl" target="_blank" class="btn btn-ghost"><i class="fab fa-instagram"></i>@fitzonesport.cl</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMUNIDAD -->
+    <section class="section-block" style="position:relative;">
+        <div class="community-bg">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1920&h=900&fit=crop&q=80" alt="Comunidad FITZONE" loading="lazy">
+            <div class="community-bg-overlay"></div>
+        </div>
+        <div class="container" style="position:relative;z-index:2;">
+            <div class="section-head fade-in">
+                <span class="section-label">Nuestra gente</span>
+                <h2 class="section-title" style="margin-top:0.5rem;">LA <span class="grad-text">COMUNIDAD</span></h2>
+                <p style="color:var(--text-muted);margin-top:1rem;max-width:500px;margin-left:auto;margin-right:auto;">Más que un gimnasio, somos una familia unida por el deporte y la superación.</p>
+                <div class="accent-line"></div>
+            </div>
+            <div class="testi-grid">
+                <div class="testimonial-card fade-in">
+                    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+                        <div style="width:46px;height:46px;border-radius:50%;background:var(--grad-cyan-blue);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-user" style="color:#000;"></i></div>
+                        <div>
+                            <h4 style="font-family:var(--font-ui);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;">Carolina M.</h4>
+                            <p style="color:var(--text-muted);font-size:0.75rem;margin-top:2px;">G.A.P. · 6 meses</p>
+                        </div>
+                    </div>
+                    <p style="color:var(--text-secondary);font-size:0.88rem;line-height:1.7;font-style:italic;">"Desde que empecé en FITZONE mi cuerpo cambió completamente. Las clases de G.A.P. son increíbles y los profes te motivan en cada sesión."</p>
+                    <div style="display:flex;gap:3px;margin-top:1rem;color:var(--cyan);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </div>
+                <div class="testimonial-card fade-in" style="transition-delay:0.1s;">
+                    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+                        <div style="width:46px;height:46px;border-radius:50%;background:var(--grad-pink-purple);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-user" style="color:#fff;"></i></div>
+                        <div>
+                            <h4 style="font-family:var(--font-ui);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;">Andrés R.</h4>
+                            <p style="color:var(--text-muted);font-size:0.75rem;margin-top:2px;">Funcional · 4 meses</p>
+                        </div>
+                    </div>
+                    <p style="color:var(--text-secondary);font-size:0.88rem;line-height:1.7;font-style:italic;">"El ambiente es espectacular. Las clases funcionales son intensas pero adaptadas a cada nivel. Nunca me aburrí en una clase."</p>
+                    <div style="display:flex;gap:3px;margin-top:1rem;color:var(--cyan);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </div>
+                <div class="testimonial-card fade-in" style="transition-delay:0.2s;">
+                    <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+                        <div style="width:46px;height:46px;border-radius:50%;background:var(--grad-full);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-user" style="color:#000;"></i></div>
+                        <div>
+                            <h4 style="font-family:var(--font-ui);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;">Valentina S.</h4>
+                            <p style="color:var(--text-muted);font-size:0.75rem;margin-top:2px;">G.A.P. · 8 meses</p>
+                        </div>
+                    </div>
+                    <p style="color:var(--text-secondary);font-size:0.88rem;line-height:1.7;font-style:italic;">"Llegué sin experiencia y hoy me siento más fuerte que nunca. El equipo de FITZONE te acompaña en todo el proceso. 100% recomendado."</p>
+                    <div style="display:flex;gap:3px;margin-top:1rem;color:var(--cyan);font-size:0.8rem;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section-block bg-alt">
+        <div class="container">
+            <div class="section-head fade-in">
+                <span class="section-label">Habla con nosotros</span>
+                <h2 class="section-title" style="margin-top:0.5rem;">CONTÁC<span class="accent-cyan">TANOS</span></h2>
+                <div class="accent-line"></div>
+            </div>
+            <div class="contact-grid">
+                <!-- Info -->
+                <div style="display:flex;flex-direction:column;gap:1.25rem;" class="fade-in">
+                    <div class="contact-card">
+                        <h3 style="font-family:var(--font-title);font-size:1.3rem;letter-spacing:0.05em;color:var(--cyan);margin-bottom:1.25rem;"><i class="fas fa-address-book" style="margin-right:0.5rem;"></i>Información de Contacto</h3>
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div>
+                                <p style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;margin-bottom:3px;">WhatsApp</p>
+                                <a href="https://wa.me/56922554457" target="_blank" style="color:var(--text-muted);font-size:0.9rem;">+56 9 2255 4457</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon pink"><i class="fab fa-instagram"></i></div>
+                            <div>
+                                <p style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;margin-bottom:3px;">Instagram</p>
+                                <a href="https://instagram.com/fitzonesport.cl" target="_blank" style="color:var(--text-muted);font-size:0.9rem;">@fitzonesport.cl</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <p style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;margin-bottom:3px;">Ubicación</p>
+                                <p style="color:var(--text-muted);font-size:0.9rem;">Alfonso Donoso 421, San Bernardo, Chile</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon pink"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <p style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;margin-bottom:3px;">Horarios</p>
+                                <p style="color:var(--text-muted);font-size:0.9rem;">Lunes, Miércoles y Viernes · 8:00 – 20:10</p>
+                                <p style="color:var(--text-muted);font-size:0.9rem;">Martes y Jueves · 9:00 – 20:10</p>
+                                <p style="color:var(--text-muted);font-size:0.9rem;">Sábado · 9:00 – 10:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-card" style="text-align:center;position:relative;overflow:hidden;min-height:200px;border:1px solid rgba(0,240,255,0.12);">
+                        <div class="glow-orb cyan" style="width:250px;height:250px;top:-50px;left:50%;transform:translateX(-50%);"></div>
+                        <div style="position:relative;z-index:2;padding-top:2rem;">
+                            <img src="images/logo.jpeg" alt="FITZONE Logo" style="width:80px;height:80px;border-radius:50%;object-fit:cover;border:2px solid rgba(0,240,255,0.4);margin:0 auto 1rem;box-shadow:0 0 24px rgba(0,240,255,0.3);">
+                            <h4 style="font-family:var(--font-title);font-size:1.6rem;letter-spacing:0.08em;">FITZONE</h4>
+                            <p style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--cyan);margin-top:4px;">Transforma Tu Vida</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- CTAs -->
+                <div style="display:flex;flex-direction:column;gap:1.25rem;" class="fade-in">
+                    <div class="contact-card" style="background:rgba(0,240,255,0.04);border-color:rgba(0,240,255,0.2);">
+                        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+                            <div style="width:48px;height:48px;background:rgba(0,240,255,0.1);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--cyan);font-size:1.4rem;"><i class="fas fa-gift"></i></div>
+                            <div>
+                                <h4 style="font-family:var(--font-title);font-size:1.3rem;letter-spacing:0.04em;color:var(--cyan);">1ª Clase Gratis</h4>
+                                <p style="color:var(--text-muted);font-size:0.78rem;">Sin compromiso · Ven a conocernos</p>
+                            </div>
+                        </div>
+                        <p style="color:var(--text-muted);font-size:0.88rem;line-height:1.65;margin-bottom:1.25rem;">Prueba una clase completamente gratis. Escríbenos por WhatsApp y coordinamos tu primera sesión.</p>
+                        <a href="https://wa.me/56922554457?text=Hola,%20quiero%20agendar%20mi%20primera%20clase%20gratis" target="_blank" class="btn btn-primary btn-full"><i class="fab fa-whatsapp"></i>Agenda tu Clase Gratis</a>
+                    </div>
+                    <div class="contact-card" style="position:relative;overflow:hidden;border:none;">
+                        <div style="position:absolute;inset:0;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);opacity:0.15;"></div>
+                        <div style="position:absolute;inset:0;border:1px solid rgba(188,24,136,0.3);border-radius:inherit;"></div>
+                        <div style="position:relative;z-index:1;text-align:center;">
+                            <h4 style="font-family:var(--font-title);font-size:1.3rem;margin-bottom:0.75rem;display:flex;align-items:center;justify-content:center;gap:0.6rem;"><i class="fab fa-instagram" style="color:#e1306c;font-size:1.8rem;"></i>ÚNETE A NUESTRA COMUNIDAD</h4>
+                            <p style="color:var(--text-secondary);font-size:0.88rem;line-height:1.7;margin-bottom:1.25rem;">Síguenos en Instagram para ver el día a día y todas nuestras novedades.</p>
+                            <div style="background:rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:1rem;margin-bottom:1.25rem;display:flex;align-items:center;gap:1rem;">
+                                <img src="images/logo.jpeg" style="width:50px;height:50px;border-radius:50%;object-fit:cover;border:2px solid #e1306c;" alt="FITZONE Instagram">
+                                <div>
+                                    <p style="font-weight:700;font-size:0.9rem;">@fitzonesport.cl</p>
+                                    <p style="color:#f06292;font-size:0.75rem;margin-top:2px;">Transforma Tu Vida</p>
+                                </div>
+                            </div>
+                            <a href="https://instagram.com/fitzonesport.cl" target="_blank" class="btn btn-full" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;font-family:var(--font-ui);font-size:0.65rem;letter-spacing:0.12em;border-radius:4px;"><i class="fab fa-instagram"></i>Seguir en Instagram</a>
+                        </div>
+                    </div>
+                    <div class="contact-card" style="text-align:center;background:var(--bg-primary);border-color:rgba(255,255,255,0.04);">
+                        <p style="color:var(--text-muted);font-size:0.88rem;margin-bottom:0.5rem;">¿Tienes dudas sobre nuestros planes?</p>
+                        <a href="https://wa.me/56922554457?text=Hola,%20quiero%20información%20sobre%20los%20planes%20de%20FITZONE" target="_blank" style="font-family:var(--font-ui);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--cyan);font-weight:700;display:inline-flex;align-items:center;gap:0.5rem;">Escríbenos <i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Mapa -->
+            <div style="margin-top:3rem;" class="fade-in">
+                <div class="contact-card" style="padding:0.5rem;border-color:rgba(0,240,255,0.15);">
+                    <div style="width:100%;height:400px;border-radius:10px;overflow:hidden;position:relative;">
+                        <iframe src="https://maps.google.com/maps?q=Alfonso+Donoso+421,+San+Bernardo,+Chile&hl=es&z=15&output=embed" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen title="Mapa FITZONE"></iframe>
+                        <div style="position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);display:flex;gap:0.75rem;flex-wrap:wrap;justify-content:center;">
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=Alfonso+Donoso+421,+San+Bernardo,+Chile" target="_blank" class="btn btn-primary" style="box-shadow:0 4px 20px rgba(0,0,0,0.5);"><i class="fas fa-directions"></i> Cómo llegar</a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Alfonso+Donoso+421,+San+Bernardo,+Chile" target="_blank" class="btn btn-ghost" style="background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);"><i class="fas fa-external-link-alt"></i> Abrir en Maps</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+                        <img src="images/logo.jpeg" alt="FITZONE Logo" style="width:42px;height:42px;border-radius:50%;object-fit:cover;border:1px solid rgba(0,240,255,0.25);">
+                        <div>
+                            <p style="font-family:var(--font-title);font-size:1.2rem;letter-spacing:0.08em;line-height:1;">FITZONE</p>
+                            <p style="font-family:var(--font-ui);font-size:0.5rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--cyan);margin-top:2px;">Transforma Tu Vida</p>
+                        </div>
+                    </div>
+                    <p style="color:var(--text-muted);font-size:0.88rem;line-height:1.65;margin-bottom:1rem;">Clases grupales de G.A.P. y Entrenamiento Funcional diseñadas por profesionales en San Bernardo.</p>
+                    <div style="display:flex;gap:0.6rem;">
+                        <a href="https://instagram.com/fitzonesport.cl" target="_blank" class="footer-social-btn ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/56922554457" target="_blank" class="footer-social-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://tiktok.com/@fitzonesport.cl" target="_blank" class="footer-social-btn" aria-label="TikTok" style="background:rgba(0,240,255,0.08);border:1px solid rgba(0,240,255,0.15);color:var(--text-muted);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all 0.3s;"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h5 style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-secondary);margin-bottom:1rem;">Navegación</h5>
+                    <ul style="display:flex;flex-direction:column;gap:0.6rem;">
+                        <li><a href="#home"          style="color:var(--text-muted);font-size:0.88rem;transition:color 0.3s;">Inicio</a></li>
+                        <li><a href="#clases"        style="color:var(--text-muted);font-size:0.88rem;transition:color 0.3s;">Clases</a></li>
+                        <li><a href="#instalaciones" style="color:var(--text-muted);font-size:0.88rem;transition:color 0.3s;">Instalaciones</a></li>
+                        <li><a href="#horario"       style="color:var(--text-muted);font-size:0.88rem;transition:color 0.3s;">Horario</a></li>
+                        <li><a href="#planes"        style="color:var(--text-muted);font-size:0.88rem;transition:color 0.3s;">Planes</a></li>
+                        <li><a href="#contacto"      style="color:var(--text-muted);font-size:0.88rem;transition:color 0.3s;">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 style="font-family:var(--font-ui);font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-secondary);margin-bottom:1rem;">Síguenos</h5>
+                    <div style="display:flex;flex-direction:column;gap:0.6rem;">
+                        <p style="display:flex;align-items:center;gap:0.5rem;color:var(--text-muted);font-size:0.88rem;"><i class="fab fa-instagram" style="color:var(--cyan);font-size:0.75rem;"></i><a href="https://instagram.com/fitzonesport.cl" target="_blank" style="transition:color 0.3s;">@fitzonesport.cl</a></p>
+                        <p style="display:flex;align-items:center;gap:0.5rem;color:var(--text-muted);font-size:0.88rem;"><i class="fab fa-tiktok" style="color:var(--cyan);font-size:0.75rem;"></i><a href="https://tiktok.com/@fitzonesport.cl" target="_blank" style="transition:color 0.3s;">@fitzonesport.cl</a></p>
+                        <p style="display:flex;align-items:center;gap:0.5rem;color:var(--text-muted);font-size:0.88rem;"><i class="fab fa-facebook" style="color:var(--cyan);font-size:0.75rem;"></i><a href="#" target="_blank" style="transition:color 0.3s;">FIT ZONE SPORT</a></p>
+                        <p style="display:flex;align-items:center;gap:0.5rem;color:var(--text-muted);font-size:0.88rem;"><i class="fas fa-map-marker-alt" style="color:var(--cyan);font-size:0.75rem;"></i>San Bernardo, Chile</p>
+                    </div>
+                </div>
+            </div>
+            <div style="border-top:1px solid rgba(255,255,255,0.05);padding-top:2rem;text-align:center;">
+                <p style="color:rgba(255,255,255,0.2);font-size:0.78rem;">&copy; 2025 FITZONE · San Bernardo, Chile</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cal.com Booking Integration -->
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", "30min", {origin:"https://app.cal.com"});
+      Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view","useSlotsViewOnSmallScreen":true});
+    </script>
+
+    <!-- LightGallery -->
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/lightgallery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/zoom/lg-zoom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.2/plugins/thumbnail/lg-thumbnail.min.js"></script>
+
+    <!-- JS propio -->
+    <script src="js/nav.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/gallery.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+/* ============================================================
+   ANIMATIONS.CSS — Scroll reveals, transiciones, efectos neón
+   ============================================================ */
+
+/* ============================================================
+   SCROLL FADE-IN
+   ============================================================ */
+.fade-in {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Variantes de dirección */
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-32px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fade-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(32px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fade-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Escala */
+.fade-in-scale {
+    opacity: 0;
+    transform: scale(0.92);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fade-in-scale.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ============================================================
+   STAGGER DELAYS (aplica a hijos directos)
+   ============================================================ */
+.stagger > *:nth-child(1) { transition-delay: 0s; }
+.stagger > *:nth-child(2) { transition-delay: 0.08s; }
+.stagger > *:nth-child(3) { transition-delay: 0.16s; }
+.stagger > *:nth-child(4) { transition-delay: 0.24s; }
+.stagger > *:nth-child(5) { transition-delay: 0.32s; }
+.stagger > *:nth-child(6) { transition-delay: 0.40s; }
+
+/* También soporta el patrón de Vibra con style inline */
+[style*="transition-delay"] { }
+
+/* ============================================================
+   NEON PULSE — efecto de parpadeo suave
+   ============================================================ */
+@keyframes neon-pulse-cyan {
+    0%, 100% { box-shadow: 0 0 10px rgba(0,240,255,0.3), 0 0 20px rgba(0,240,255,0.15); }
+    50%       { box-shadow: 0 0 20px rgba(0,240,255,0.6), 0 0 40px rgba(0,240,255,0.3); }
+}
+@keyframes neon-pulse-pink {
+    0%, 100% { box-shadow: 0 0 10px rgba(255,0,160,0.3), 0 0 20px rgba(255,0,160,0.15); }
+    50%       { box-shadow: 0 0 20px rgba(255,0,160,0.6), 0 0 40px rgba(255,0,160,0.3); }
+}
+
+.neon-pulse-cyan { animation: neon-pulse-cyan 3s ease-in-out infinite; }
+.neon-pulse-pink { animation: neon-pulse-pink 3s ease-in-out infinite; }
+
+/* ============================================================
+   SCAN LINE — efecto UI futurista (opcional)
+   ============================================================ */
+@keyframes scan-line {
+    0%   { top: -5%; }
+    100% { top: 105%; }
+}
+.scan-container { overflow: hidden; }
+.scan-container::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(0,240,255,0.4), transparent);
+    animation: scan-line 4s linear infinite;
+    pointer-events: none;
+}
+
+/* ============================================================
+   GRADIENT BORDER HOVER
+   ============================================================ */
+.grad-border {
+    position: relative;
+}
+.grad-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.5px;
+    background: var(--grad-full);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+                  linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+.grad-border:hover::before { opacity: 1; }
+
+/* ============================================================
+   SHIMMER (loading / highlight)
+   ============================================================ */
+@keyframes shimmer {
+    0%   { background-position: -600px 0; }
+    100% { background-position:  600px 0; }
+}
+.shimmer {
+    background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(0,240,255,0.15) 50%,
+        transparent 100%
+    );
+    background-size: 600px 100%;
+    animation: shimmer 2.5s infinite;
+}
+
+/* ============================================================
+   TYPEWRITER CURSOR (para el hero title si se desea)
+   ============================================================ */
+.cursor-blink::after {
+    content: '|';
+    margin-left: 3px;
+    color: var(--cyan);
+    animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+/* ============================================================
+   FLOAT UP — animación sutil de levitación
+   ============================================================ */
+@keyframes float-up {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-8px); }
+}
+.float-anim { animation: float-up 4s ease-in-out infinite; }
+
+/* ============================================================
+   HERO BADGE ENTRY
+   ============================================================ */
+@keyframes entry-slide-down {
+    from { opacity: 0; transform: translateY(-16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.entry-slide-down {
+    animation: entry-slide-down 0.6s ease forwards;
+}
+
+/* ============================================================
+   GRADIENT TEXT ANIMATED
+   ============================================================ */
+@keyframes grad-shift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.grad-text-animated {
+    background: linear-gradient(270deg, #00F0FF, #0072FF, #4A00E0, #FF00A0, #00F0FF);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: grad-shift 6s ease infinite;
+}
