@@ -323,11 +323,11 @@
 .discipline-grid {
     display: grid;
     gap: 2rem;
-    max-width: 900px;
+    max-width: 1180px;
     margin: 0 auto;
 }
-/* Forzamos una columna para que se vean profesionales y grandes */
 .discipline-grid { grid-template-columns: 1fr; }
+@media (min-width: 1024px) { .discipline-grid { grid-template-columns: repeat(3, 1fr); } }
 
 /* ============================================================
    WHY US GRID
@@ -409,6 +409,153 @@
 }
 @media (min-width: 768px)  { .promo-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1024px) { .promo-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* ============================================================
+   SCHEDULE
+   ============================================================ */
+.schedule-layout {
+    max-width: 1180px;
+    margin: 0 auto 2rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.schedule-figure-wrap {
+    position: relative;
+}
+
+.schedule-figure-frame {
+    position: relative;
+    display: block;
+    border-radius: 24px;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(10,10,20,0.95) 0%, rgba(5,5,11,1) 100%);
+    border: 1px solid rgba(0,240,255,0.16);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 40px rgba(0,240,255,0.08);
+    padding: 0.85rem;
+    cursor: zoom-in;
+}
+
+.schedule-figure-frame::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0,240,255,0.08), transparent 35%, rgba(255,0,160,0.08));
+    pointer-events: none;
+}
+
+.schedule-image {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.schedule-expand-hint {
+    position: absolute;
+    right: 1.35rem;
+    bottom: 1.35rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.65rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(5,5,11,0.78);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #fff;
+    font-size: 0.76rem;
+    line-height: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.schedule-expand-hint i {
+    color: var(--cyan);
+}
+
+.schedule-image-caption {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.schedule-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+    line-height: 1;
+}
+
+.schedule-chip i {
+    color: var(--cyan);
+}
+
+.schedule-summary {
+    display: grid;
+    gap: 1rem;
+}
+
+.schedule-summary-note {
+    border-color: rgba(0,114,255,0.24);
+    box-shadow: 0 20px 60px rgba(0,114,255,0.08);
+}
+
+.schedule-footnote {
+    display: grid;
+    gap: 0.9rem;
+}
+
+.schedule-inline-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem 1.1rem;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: var(--text-secondary);
+}
+
+.schedule-inline-note i {
+    color: var(--cyan);
+    margin-top: 0.15rem;
+}
+
+#horario > .container > .fade-in[style*="max-width:800px"] {
+    display: none;
+}
+
+#instalaciones .facility-pair:nth-of-type(2) > div:last-child > div > div:first-child p:last-child {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .schedule-layout {
+        grid-template-columns: minmax(0, 1.3fr) minmax(340px, 0.9fr);
+        align-items: start;
+    }
+
+    .schedule-figure-wrap {
+        grid-row: span 2;
+    }
+}
+
+@media (max-width: 640px) {
+    .schedule-expand-hint {
+        right: 1rem;
+        bottom: 1rem;
+        font-size: 0.72rem;
+        padding: 0.6rem 0.8rem;
+    }
+}
 
 /* ============================================================
    COMMUNITY SECTION OVERLAY

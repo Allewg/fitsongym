@@ -290,6 +290,9 @@
 .discipline-card .dc-overlay.neon-tint-pink {
     background: linear-gradient(to top, rgba(0,0,0,0.95) 20%, rgba(0,0,0,0.7) 50%, rgba(255,0,160,0.15) 100%);
 }
+.discipline-card .dc-overlay.neon-tint-blue {
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 20%, rgba(0,0,0,0.7) 50%, rgba(0,114,255,0.18) 100%);
+}
 
 .discipline-card .dc-content {
     position: absolute;
@@ -345,6 +348,54 @@
 .discipline-tag.blue  { color: #7DF9FF;      background: rgba(0,114,255,0.1);  border: 1px solid rgba(0,114,255,0.3); }
 .discipline-tag.green { color: #4ade80;      background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.3); }
 .discipline-tag.purple{ color: #c084fc;      background: rgba(192,132,252,0.1);border: 1px solid rgba(192,132,252,0.3); }
+
+.schedule-summary-card {
+    background: linear-gradient(180deg, rgba(14,14,28,0.92) 0%, rgba(19,19,31,0.96) 100%);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    padding: 1.5rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+.schedule-summary-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.15rem;
+    letter-spacing: 0.04em;
+    margin: 0.8rem 0 0.45rem;
+    text-transform: uppercase;
+}
+
+.schedule-summary-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+.schedule-bullet-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    margin-top: 1rem;
+}
+
+.schedule-bullet-list li {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    line-height: 1.55;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.schedule-bullet-list li::before {
+    content: '';
+    position: absolute;
+    top: 0.55rem;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--grad-full);
+}
 
 /* ============================================================
    TESTIMONIAL CARD
