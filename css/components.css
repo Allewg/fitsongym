@@ -485,9 +485,9 @@
    GALLERY ITEM
    ============================================================ */
 .gallery-item {
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
-    aspect-ratio: 1;
+    aspect-ratio: 9/16;
     cursor: pointer;
     border: 1px solid var(--border-subtle);
     transition: border-color 0.3s;
